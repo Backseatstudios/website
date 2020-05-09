@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Favicon -->
-        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="shortcut icon" href="assets/images/favicon.png">
         <!-- Bootstrap -->
         <link rel="stylesheet" href="assets/styles/vendor/bootstrap.min.css">
         <!-- Fonts -->
@@ -35,7 +35,7 @@
         <!-- ========== Preloader ========== -->
 
         <div class="preloader">
-          <img src="../assets/images/loader.svg" alt="Loading...">
+          <img src="assets/images/loader.svg" alt="Loading...">
         </div>
 
 
@@ -79,7 +79,7 @@
 
                 <!-- Contact -->
                 <li>
-                  <a href="contact." hreflang="#contact" role="button" aria-haspopup="true" aria-expanded="false">Contact</a>
+                  <a href="contact.html" hreflang="#contact" role="button" aria-haspopup="true" aria-expanded="false">Contact</a>
                 </li><!-- / Contact -->
 
               </ul><!-- / .nav .navbar-nav -->
@@ -183,14 +183,14 @@
 
                     <!-- Name -->
                     <div class="form-group">
-                      <input type="text" name="name" id="name-contact-3" class="form-control text-right">
+                      <input type="text" name="name" id="name-contact-3" required="required" class="form-control text-right">
                       <label for="name-contact-3">Name *</label>
                       <span class="pull-right alert-error"></span>
                     </div>
 
                     <!-- Email -->
                     <div class="form-group">
-                      <input type="email" name="_replyto" id="email-contact-3" class="form-control text-right">
+                      <input type="email" name="_replyto" id="email-contact-3" required="required" class="form-control text-right">
                       <label for="email-contact-3">Email *</label>
                       <span class="pull-right alert-error"></span>
                     </div>
@@ -204,7 +204,7 @@
                     <!-- Message -->
                     <div class="form-group">
                       <p>Just say hello, or tell us about your project</p>
-                      <textarea class="form-control text-right" name="message" id="message-contact-1" rows="5"></textarea>
+                      <textarea class="form-control text-right" required="required" name="message" id="message-contact-1" rows="5"></textarea>
                       <label for="message-contact-1">Message *</label>
                     </div>
 
@@ -212,7 +212,7 @@
 
                     <!-- Ajax Message -->
                     <!-- <div class="ajax-message"></div> -->
-                    <p id="my-form-status"></p>
+                    <b><p class="text-center bg-success" id="my-form-status"></p></b>
 
                   </form>
                 </div>

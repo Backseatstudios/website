@@ -836,7 +836,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	function success() {
 		form.reset();
 		button.style = "display: none ";
-		status.innerHTML = "Thanks!";
+		status.innerHTML = "message sent successfully , Thanks !";
 	}
 
 	function error() {
@@ -870,6 +870,11 @@ function ajax(method, url, data, success, error) {
 }
 //formspree end
 
+//	Validate form on typing
+$( '.form-ajax' ).on( 'keyup', 'input.validate-locally', function() {
+	validateField( $(this) );
+});
+
 //	AJAX call
 $( '.form-ajax' ).submit(function(e) {
 	e.preventDefault();
@@ -895,20 +900,12 @@ function validateField ( field ) {
 
 	// Test the name field
 	if ( field.attr("name") === "name" ) {
-		if ( !validateLength( value, 2 ) ) {
+		if ( !validateLength( value, 1 ) ) {
 					error = true;
 					errorText += '<i class="fa fa-info-circle"></i> The name is too short!<br>';
 					$('input[name="name"]').addClass('input-error');
 		} else {
 			$('input[name="name"]').removeClass('input-error');
-		}
-
-		if ( !expLettersOnly.test( value ) ) {
-					error = true;
-					errorText += '<i class="fa fa-info-circle"></i> The name can contain only letters and spaces!<br>';
-					$('input[name="name"]').addClass('input-error-2');
-		} else {
-			$('input[name="name"]').removeClass('input-error-2');
 		}
 	}
 

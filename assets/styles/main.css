@@ -3940,7 +3940,7 @@ fieldset[disabled] .form-control:hover {
   opacity: 1;
 }
 
-.ft-hover-item .ft-1, .ft-hover-item .ft-2 {
+.ft-hover-item .ft-1 {
   background: #ccc url('../images/projects/luxuryStoreBag.jpg');
   background-size: 100%;
   background-position: 50%;
@@ -3961,9 +3961,11 @@ fieldset[disabled] .form-control:hover {
 }
 
 .ft-hover-item .ft-2 {
-  background: #ccc url('../images/projects/albatikcard.jpg');
+  background: #ccc url('../images/projects/AlbatikCard.jpg');
   background-size: 100%;
   background-position: 50%;
+  -webkit-transition: background-size 0.3s;
+          transition: background-size 0.3s;
 }
 
 .ft-hover-item .ft-2 .bg-overlay {
